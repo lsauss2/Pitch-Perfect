@@ -17,6 +17,8 @@ class RecordSoundVC: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder: AVAudioRecorder!
     
+    enum RecordingState { case recording, notRecording }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,13 +27,24 @@ class RecordSoundVC: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        stopRecordingButton.isEnabled = false
+        configureUI(.notRecording)
+    }
+    
+    func configureUI(_ playState: RecordingState){
+        switch(playState) {
+        case .recording:
+            tabToRecordLabel.text = "Recording in Progress..."
+            stopRecordingButton.isEnabled = true
+            recordButton.isEnabled = false
+        case .notRecording:
+            stopRecordingButton.isEnabled = false
+            recordButton.isEnabled = true
+            tabToRecordLabel.text = "Tap to record"
+        }
     }
     
     @IBAction func recordAudio(_ sender: Any) {
-        tabToRecordLabel.text = "Recording in Progress..."
-        stopRecordingButton.isEnabled = true
-        recordButton.isEnabled = false
+        configureUI(.recording)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let recordingName = "recoredVoice.wav"
@@ -50,9 +63,7 @@ class RecordSoundVC: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecord(_ sender: Any) {
-        stopRecordingButton.isEnabled = false
-        recordButton.isEnabled = true
-        tabToRecordLabel.text = "Tap to record"
+        configureUI(.notRecording)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)

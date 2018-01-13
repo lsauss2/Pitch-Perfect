@@ -13,6 +13,7 @@
 		8236AFE12009A47300E3BC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8236AFE02009A47300E3BC93 /* Assets.xcassets */; };
 		8236AFE42009A47300E3BC93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8236AFE22009A47300E3BC93 /* LaunchScreen.storyboard */; };
 		8236AFEC2009E30600E3BC93 /* PlayEffectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236AFEB2009E30600E3BC93 /* PlayEffectsVC.swift */; };
+		8236AFEE2009EA9900E3BC93 /* AudioExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236AFED2009EA9900E3BC93 /* AudioExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8236AFE32009A47300E3BC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8236AFE52009A47300E3BC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8236AFEB2009E30600E3BC93 /* PlayEffectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayEffectsVC.swift; sourceTree = "<group>"; };
+		8236AFED2009EA9900E3BC93 /* AudioExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8236AFE02009A47300E3BC93 /* Assets.xcassets */,
 				8236AFE22009A47300E3BC93 /* LaunchScreen.storyboard */,
 				8236AFE52009A47300E3BC93 /* Info.plist */,
+				8236AFED2009EA9900E3BC93 /* AudioExtensions.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				8236AFDC2009A47300E3BC93 /* RecordSoundVC.swift in Sources */,
 				8236AFEC2009E30600E3BC93 /* PlayEffectsVC.swift in Sources */,
+				8236AFEE2009EA9900E3BC93 /* AudioExtensions.swift in Sources */,
 				8236AFDA2009A47300E3BC93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

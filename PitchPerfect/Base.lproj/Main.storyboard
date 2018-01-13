@@ -40,7 +40,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRb-ZR-rgO"/>
-                                    <segue destination="aeu-0I-tob" kind="show" id="GF1-xX-AP5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,16 +59,17 @@
                         <outlet property="recordButton" destination="D9w-rx-O4E" id="fyy-L6-s6E"/>
                         <outlet property="stopRecordingButton" destination="4wH-KQ-2Ev" id="naH-EK-Kbk"/>
                         <outlet property="tabToRecordLabel" destination="xCm-QQ-nYp" id="WuA-Py-GMr"/>
+                        <segue destination="aeu-0I-tob" kind="show" identifier="showEffectsVC" id="Y6c-Vc-AXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="548" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Play EffectsVC-->
         <scene sceneID="cyL-l4-V6A">
             <objects>
-                <viewController id="aeu-0I-tob" sceneMemberID="viewController">
+                <viewController id="aeu-0I-tob" customClass="PlayEffectsVC" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EZI-Zf-23h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

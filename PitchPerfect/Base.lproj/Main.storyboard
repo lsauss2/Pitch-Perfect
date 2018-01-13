@@ -22,15 +22,40 @@
                                 <rect key="frame" x="163" y="328.5" width="49" height="30"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sxr-Rn-6hz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCm-QQ-nYp">
+                                <rect key="frame" x="149.5" y="388.5" width="75.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wH-KQ-2Ev">
+                                <rect key="frame" x="134.5" y="528" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRb-ZR-rgO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="D9w-rx-O4E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7oz-qF-10J"/>
+                            <constraint firstItem="xCm-QQ-nYp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xu-3g-CcA"/>
+                            <constraint firstItem="4wH-KQ-2Ev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ACN-9E-R9a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4wH-KQ-2Ev" secondAttribute="bottom" constant="109" id="F63-ap-wA6"/>
+                            <constraint firstItem="xCm-QQ-nYp" firstAttribute="top" secondItem="D9w-rx-O4E" secondAttribute="bottom" constant="30" id="X4V-dp-hdl"/>
                             <constraint firstItem="D9w-rx-O4E" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nFR-9A-1sa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="D9w-rx-O4E" id="fyy-L6-s6E"/>
+                        <outlet property="stopRecordingButton" destination="4wH-KQ-2Ev" id="naH-EK-Kbk"/>
+                        <outlet property="tabToRecordLabel" destination="xCm-QQ-nYp" id="WuA-Py-GMr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
